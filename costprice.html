@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>USS cost price calculator</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+
+</head>
+<body>
+<!--navigator-->
+<div class="container">
+    <div class="row">
+        <h1>USS logistic system</h1>
+        <div class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#resp-menu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <nav class="collapse navbar-collapse" id="resp-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/costprice.html">Cost Price Calculator</a></li>
+                        <li><a href="/ordercalc.html">Actual rings size</a></li>
+                        <li><a href="/loadcsv.html">Load CSV</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!--navigator-->
+<div class="container">
+    <form action="price" method="post">
+        <textarea name="skuId"></textarea>
+        <input type="submit" value="get Price">
+    </form>
+</div>
+<div class="container">
+    <div class="row"> </div>
+    <select id="history_costs" onchange="getHistory()">
+        <option></option>
+    </select>
+    <br>
+    USD <input type="text" id="in_usd" onchange="Calc()" value="0"><br>
+    GOLD <input type="text" id="in_gold" onchange="Calc()" value="0"><br>
+    kr17 <input type="text" id="in_kr17" onchange="Calc()" value="0"><br>
+    kr57 <input type="text" id="in_kr57s" onchange="Calc()" value="0"><br>
+    prec<input type="text" id="in_prec" onchange="Calc()" value="0"><br>
+    big stone <input type="text" id="in_kr57b" onchange="Calc()" value="0"><br>
+</div>
+</body>
+</html>
